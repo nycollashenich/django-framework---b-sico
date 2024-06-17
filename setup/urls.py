@@ -20,6 +20,7 @@ from django.urls import path, include
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('painel/', admin.site.urls),
+    # painel = antigo admin/
     path('', include('core.urls')),
 ]
