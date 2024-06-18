@@ -9,5 +9,21 @@
 <body>
     <h1>Index</h1>
     <h2>{{ course }}</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+            </tr>    
+        </thead>
+        <tbody>
+            {% for produto in products %}
+                <tr>  
+                    <td><a href="{% url 'produto' produto.id %}">{{ produto.nome }}</a></td>
+                    <td>{{ produto.preco }}</td>
+                </th>
+            {% endfor %}
+        <tbody>
+    </table>
 </body>
 </html>
