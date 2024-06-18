@@ -17,10 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-
+from django.conf.urls import handler404, handler500 # gerenciando a página de erros
+from core import views
 
 urlpatterns = [
     path('painel/', admin.site.urls),
     # painel = antigo admin/
     path('', include('core.urls')),
 ]
+
+handler404 = views.error404
+handler404 = views.error500

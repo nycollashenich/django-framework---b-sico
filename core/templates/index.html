@@ -1,3 +1,4 @@
+{% load static %}
 {% comment %} Lembrar de resetar o url {% endcomment %}
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -5,9 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Django 1 - Index</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Usado para carregar os arquivos staticos -->
 </head>
 <body>
     <h1>Index</h1>
+    <img src="{% static 'imgs/django.png'%}" alt="">
+
     <h2>{{ course }}</h2>
     <table>
         <thead>
@@ -25,5 +30,8 @@
             {% endfor %}
         <tbody>
     </table>
+    <button onclick="teste();">Clique-me</button>
+
+    <script type="text/javascript" src="'{% static 'js/script.js' %}"></script>
 </body>
 </html>
